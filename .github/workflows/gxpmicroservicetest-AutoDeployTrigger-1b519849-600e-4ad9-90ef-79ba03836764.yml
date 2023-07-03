@@ -6,9 +6,9 @@ on:
   push:
     branches: 
       [ start ]
-    paths:
-    - '**'
-    - '.github/workflows/gxpmicroservicetest-AutoDeployTrigger-1b519849-600e-4ad9-90ef-79ba03836764.yml'
+ #   paths:
+ #   - '**'
+ #   - '.github/workflows/gxpmicroservicetest-AutoDeployTrigger-1b519849-600e-4ad9-90ef-79ba03836764.yml'
 
   # Allow mannually trigger 
   workflow_dispatch:

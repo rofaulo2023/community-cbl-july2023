@@ -71,7 +71,12 @@ app.get('/api/:country/:date', (req, res, next) => {
   // Return
   res.json(output)
 })
-
+app.get('/api/:country/:date', (req, res, next) => {
+  // Does country exist
+  if(!data[req.params.country]) {
+    res.status(404).json({ message: `Country ${req.params.country} not found`})
+    return;
+  }
 // Default Error Handler
 app.use((err, req, res, next) => {
   res.status(500).json({ message: `Server Error: ${err}`})
